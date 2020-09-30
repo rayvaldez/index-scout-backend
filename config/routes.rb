@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
-  resources :badges
-  resources :reports
-  resources :players
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  namespace :api do
+    namespace :v1 do
+      resources :players, only: [:index, :show] do
+        resources :reports
+        resources :badges, only: [:index, :show, :update]
+      end
+    end
+  end
+  
 end
