@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Rails Api for Index Scout Frontend
 
-Things you may want to cover:
+This api provides a football player database, documenting key attributes like
+name, age, football team and position.
 
-* Ruby version
+### Deployment instructions
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Type 'rails s' to start the server
