@@ -20,10 +20,19 @@ class Api::V1::ReportsController < ApplicationController
     render json: report, status:200
   end
 
+  def destroy
+    report = Report.find(params[:id])
+    player = Player.find(report.player_id)
+
+    report.destroy
+
+    render json: player
+  end
+
   private
 
   def report_params
     params.require(:report).permit(:player_id, :content, :name)
   end
-  
+
 end
